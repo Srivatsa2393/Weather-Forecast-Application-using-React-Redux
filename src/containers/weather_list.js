@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { Sparklines, SparklinesLine } from 'react-sparklines';
+import Chart from '../components/chart'
 
 
 class WeatherList extends Component{
@@ -10,30 +10,18 @@ const name = cityData.city.name;
 const temps = cityData.list.map(weather => weather.main.temp);
 console.log(temps);
 
-const pressure = cityData.list.map(weather => weather.main.pressure);
-console.log(pressure);
+const pressures = cityData.list.map(weather => weather.main.pressure);
+console.log(pressures);
 
-const humidity = cityData.list.map(weather => weather.main.humidity);
-console.log(humidity);
+const humidities = cityData.list.map(weather => weather.main.humidity);
+console.log(humidities);
 
   return(
     <tr key={name}>
       <td>{name}</td>
-      <td>
-        <Sparklines svgHeight={100} svgWidth={180} data={temps}>
-          <SparklinesLine color="green" />
-        </Sparklines>
-      </td>
-      <td>
-        <Sparklines svgHeight={100} svgWidth={180} data={pressure}>
-          <SparklinesLine color="green" />
-        </Sparklines>
-      </td>
-      <td>
-        <Sparklines svgHeight={100} svgWidth={180} data={humidity}>
-          <SparklinesLine color="green" />
-        </Sparklines>
-      </td>
+      <td><Chart data={temps} color='red' units="K"/></td>
+      <td><Chart data={pressures} color='orange' units="hPa"/></td>
+      <td><Chart data={humidities} color='green' units="%"/></td>
     </tr>
   );
 }
@@ -44,9 +32,9 @@ console.log(humidity);
         <thead>
           <tr>
             <th>City</th>
-            <th>Temperature</th>
-            <th>Pressure</th>
-            <th>Humidity</th>
+            <th>Temperature (K)</th>
+            <th>Pressure (hPa)</th>
+            <th>Humidity (%)</th>
           </tr>
         </thead>
         <tbody>
