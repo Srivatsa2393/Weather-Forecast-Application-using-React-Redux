@@ -8,7 +8,7 @@ const name = cityData.city.name;
 
   return(
     <tr key={name}>
-      
+      <td>{name}</td>
     </tr>
   )
 }
