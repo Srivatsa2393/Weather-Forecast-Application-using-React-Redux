@@ -1,25 +1,12 @@
-# ReduxSimpleStarter
+The sample weather application looks as follows
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+![capture](https://user-images.githubusercontent.com/18416366/27689609-6461c1cc-5cfc-11e7-86d9-53950cd70782.PNG)
 
-### Getting Started
-
-There are two methods for getting started with this repo.
-
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
+Overall review of the application
+Used React for the application view
+Used Redux for the application state
+Created an action creator and use of middlewares redux-promise
+Used AXIOS for AJAX request
+Used reducers for avoiding the state mutations
+For building of charts used a library called react sparklines
+Used React google maps for displaying the cities
