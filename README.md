@@ -1,4 +1,4 @@
-##The sample weather application looks as follows
+### The sample weather application looks as follows
 
 ![capture](https://user-images.githubusercontent.com/18416366/27689609-6461c1cc-5cfc-11e7-86d9-53950cd70782.PNG)
 ```
